@@ -18,20 +18,15 @@ public class ParseIntegers {
     public static void main(String[] args) {
         Iterator<String> words = WORDS.iterator();
         int sum = 0;
-        String justWords = "";
+        StringBuilder justWords = new StringBuilder();
         while (words.hasNext()) {
             String next = words.next();
-<<<<<<< HEAD
            if (Character.isDigit(next.charAt(0))){
                int number = Integer.parseInt(next);
                sum = sum + number;
            }else {
-               justWords = justWords + " " + next;
+               justWords.append(" ").append(next);
            }
-=======
-            int number = Integer.parseInt(next);
-            // todo: complete it
->>>>>>> origin/master
         }
         System.out.println("Sum is " + sum);
         System.out.println("Just words:" + justWords);
